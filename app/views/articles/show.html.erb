@@ -11,8 +11,16 @@
 </p>
 
 <p>
+  <strong>Created by:</strong> <%= @article.user.username %>
+  <br />
+  <strong>Created Date:</strong> <%= time_ago_in_words(@article.created_at) %>
+  <br />
+  <strong>Last Updated:</strong> <%= time_ago_in_words(@article.updated_at) %>
+  <br />
   <strong>Summary details:</strong>
+  <br />
   <%= @article.summary_details %>
+  <br />
 </p>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
