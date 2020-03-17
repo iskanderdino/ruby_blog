@@ -1,0 +1,24 @@
+<div  class="container-fluid">
+  <div class="row align-items-center">
+    <div class="col-sm-12 col-md-4 offset-md-4">
+      <div id="login">
+      <h2>Login Account</h2>
+      <%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |form| %>
+        <div class="field">
+          <%= form.label :email %>
+          <%= form.text_field :email %>
+        </div>
+
+        <div class="field">
+          <%= form.label :password, "Password" %>
+          <%= form.password_field :password %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit "Log in" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
